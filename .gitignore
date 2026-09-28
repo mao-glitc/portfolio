@@ -1,0 +1,16 @@
+# Node
+node_modules/
+npm-debug.log*
+*.log
+
+# 秘密情報
+.env
+.env.*
+!.env.example
+
+# OS / エディタ
+Thumbs.db
+desktop.ini
+.DS_Store
+.vscode/
+.idea/

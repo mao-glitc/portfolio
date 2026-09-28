@@ -1,0 +1,117 @@
+/* デジタル庁デザインシステム (https://design.digital.go.jp/dads/) 準拠。値は公式 design-tokens / example-components-html から転記 */
+:root{
+  --color-neutral-white:#fff;
+  --color-neutral-black:#000;
+  --color-neutral-solid-gray-420:#949494;
+  --color-neutral-solid-gray-600:#666;
+  --color-neutral-solid-gray-800:#333;
+  --color-key-900:#0017c1;
+  --color-primitive-blue-1000:#00118f;
+  --color-primitive-magenta-900:#8b008b;
+  --color-primitive-orange-800:#c74700;
+  --color-primitive-yellow-300:#ffd43d;
+  --font-family-sans:"Noto Sans JP",-apple-system,BlinkMacSystemFont,sans-serif;
+  --border-radius-8:.5rem;
+  --border-radius-16:1rem;
+  --gutter:2rem; /* 本文16px × 2 */
+}
+*{box-sizing:border-box}
+html{scrollbar-gutter:stable}
+/* 本文: Std-16N-170（48rem以上で17px） */
+body{margin:0;background:var(--color-neutral-white);color:var(--color-neutral-solid-gray-800);
+  font-family:var(--font-family-sans);font-size:1rem;line-height:1.7;letter-spacing:.02em;
+  line-break:strict;overflow-wrap:anywhere}
+main{max-width:64rem;margin:0 auto;padding:4rem var(--gutter)}
+p{margin:0}
+h1,h2,h3{margin:0;font-weight:700;color:var(--color-neutral-solid-gray-800)}
+
+/* リンク（dads-link） */
+a:any-link{color:var(--color-primitive-blue-1000);text-decoration:underline;
+  text-decoration-thickness:.0625rem;text-underline-offset:.1875rem}
+a:visited{color:var(--color-primitive-magenta-900)}
+@media (hover:hover){a:hover{color:var(--color-key-900);text-decoration-thickness:.1875rem}}
+a:active{color:var(--color-primitive-orange-800);text-decoration-thickness:.0625rem}
+:focus-visible{outline:.25rem solid var(--color-neutral-black);outline-offset:.125rem;border-radius:.25rem;
+  box-shadow:0 0 0 .125rem var(--color-primitive-yellow-300)}
+a:focus-visible{background-color:var(--color-primitive-yellow-300)}
+
+/* ヒーロー: 肩書きは hgroup 内の p、h1 は1つだけ */
+.hero hgroup{display:grid;gap:.5rem}
+.hero .en{font-size:1.375rem;line-height:1.5;font-weight:700}          /* ショルダー: 45px見出しには22px */
+.hero h1{font-size:2.8125rem;line-height:1.4;letter-spacing:0}         /* Std-45B-140 */
+.hero .tagline{font-size:1.5rem;line-height:1.5;font-weight:700}      /* Std-24B-150 */
+.hero .about{display:grid;gap:.5rem;margin-top:1.5rem}
+.links{display:flex;flex-wrap:wrap;gap:1.5rem;margin:1.5rem 0 0;padding:0;list-style:none}
+
+/* 見出し: 左にキーカラーのバー（Heading data-chip） Std-32B-150 */
+section{margin-top:4rem}
+.section-title{position:relative;margin-bottom:1.5rem;padding-left:calc(1em/3 + .5em);
+  font-size:2rem;line-height:1.5;letter-spacing:.01em}
+.section-title::before{content:"";position:absolute;left:0;top:.2em;bottom:.1em;width:calc(1em/3);
+  background:var(--color-key-900)}
+@supports (top:1lh){.section-title::before{top:calc(.5lh - .45em);bottom:calc(.5lh - .55em)}}
+
+/* カード */
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,22rem),1fr));gap:2rem 1.5rem}
+.card{display:flex;flex-direction:column;gap:1rem;padding:1.5rem;
+  border:1px solid var(--color-neutral-solid-gray-420);border-radius:var(--border-radius-16);
+  background:var(--color-neutral-white)}
+.card__head{display:flex;justify-content:space-between;align-items:flex-start;gap:1rem}
+.card__head .chip{flex-shrink:0}
+.card__title{font-size:1.25rem;line-height:1.5}  /* Std-20B-150 */
+
+/* リスト（dads-list） */
+.list{margin:0;padding-left:2rem}
+.list li+li{margin-top:.25rem}
+
+/* チップラベル: 非インタラクティブな状態・分類の表示 */
+.chip{display:inline-grid;align-items:center;min-height:2rem;padding:.1875rem .4375rem;
+  border:1px solid var(--_non-text);border-radius:var(--border-radius-8);
+  font-size:1rem;line-height:1;letter-spacing:.02em;overflow-wrap:anywhere}
+.chip[data-color="gray"]{--_non-text:#4d4d4d;--_bg:#f2f2f2;--_text:#333}
+.chip[data-color="blue"]{--_non-text:#264af4;--_bg:#e8f1fe;--_text:#0031d8}
+.chip[data-color="green"]{--_non-text:#197a4b;--_bg:#e6f5ec;--_text:#115a36}
+.chip[data-style="filled-1"]{background:var(--_bg);color:var(--_text)}
+.chip[data-style="outlined"]{background:var(--color-neutral-white);color:var(--_text)}
+.tags{display:flex;flex-wrap:wrap;gap:.5rem;margin:auto 0 0;padding:0;list-style:none}
+
+/* 数値: 説明リスト。区切りは Divider（solid-gray-420, 1px） */
+.stats{display:flex;flex-wrap:wrap;gap:.5rem 2rem;margin:0;padding-top:1rem;
+  border-top:1px solid var(--color-neutral-solid-gray-420)}
+.stats dt{font-size:.875rem;line-height:1.3;letter-spacing:0;color:var(--color-neutral-solid-gray-600)}   /* Dns-14N-130 */ /* dd: Dns-17B-130 */
+.stats dd{margin:0;font-weight:700;font-size:1.0625rem;line-height:1.3;letter-spacing:0;font-variant-numeric:tabular-nums}
+
+/* 年表: 説明リスト（dt=時期, dd=内容） */
+.timeline{margin:0}
+.timeline>div{display:grid;grid-template-columns:8rem 1fr;gap:1.5rem;padding:1.5rem 0;
+  border-bottom:1px solid var(--color-neutral-solid-gray-420)}
+.timeline>div:first-child{border-top:1px solid var(--color-neutral-solid-gray-420)}
+.timeline dt{font-weight:700;font-variant-numeric:tabular-nums}
+.timeline dd{margin:0;display:grid;gap:.5rem}
+.timeline h3{font-size:1.125rem;line-height:1.6}   /* Std-18B-160 */
+
+.upcoming{display:grid;gap:.5rem}
+.upcoming h3{font-size:1.125rem;line-height:1.6}
+.skills{margin:0}
+.skills>div{display:grid;grid-template-columns:8rem 1fr;gap:1.5rem;padding:.5rem 0}
+.skills dt{font-weight:700}
+.skills dd{margin:0}
+
+footer{margin-top:4rem;padding-top:1.5rem;border-top:1px solid var(--color-neutral-solid-gray-420);
+  font-size:1rem;color:var(--color-neutral-solid-gray-600)}
+
+/* ブレークポイントは 48rem（768px）の1つだけ */
+@media (min-width:48rem){body{font-size:1.0625rem}}
+@media (width < 48rem){
+  main{padding:2.5rem 1rem}
+  .hero h1{font-size:1.75rem;line-height:1.5;letter-spacing:.01em}  /* Std-28B-150 */
+  .hero .en{font-size:1rem;line-height:1.7}
+  .hero .tagline{font-size:1.25rem}
+  section{margin-top:2.5rem}
+  .section-title{font-size:1.5rem;letter-spacing:.02em}  /* Std-24B-150 */
+  .timeline>div,.skills>div{grid-template-columns:1fr;gap:.25rem}
+}
+@media (forced-colors:active){
+  .section-title::before{background:CanvasText}
+  .chip{border-color:CanvasText}
+}

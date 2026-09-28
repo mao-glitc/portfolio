@@ -1,0 +1,118 @@
+{
+  "_comment": "手で書く情報はここだけ。数値(行数・テスト数・コミット数など)は build.mjs が各プロジェクトから自動で集計する。盛らない・事実だけ書く。",
+  "name": "宮崎 真生",
+  "nameEn": "Mao Miyazaki",
+  "tagline": "生成AIを「使う側」から「システムに組み込む側」へ。",
+  "about": [
+    "大和大学 情報学部 情報学科 2年。",
+    "AIエージェントを自分の生活・学習の課題に組み込み、動く仕組みとして運用しています。関心はマルチエージェントシステム、HCI、行動変容。",
+    "大学院進学（奈良先端科学技術大学院大学ほか）を志望しています。"
+  ],
+  "links": [
+    { "label": "GitHub", "url": "", "_todo": "公開したらURLを入れる。空欄のリンクは表示されない" },
+    { "label": "YouTube", "url": "", "_todo": "チャンネル開設後に入れる" },
+    { "label": "Mail", "url": "" }
+  ],
+  "awards": [
+    {
+      "date": "2026",
+      "title": "AI Business Challenge FES 2026（SAJ主催）AIサービス提案プレゼン部門 paiza株式会社賞",
+      "detail": "「思考プロセス可視化・AIキャリアメンター」— コーディングの結果だけでなく過程をAIが解析・評価するサービスを提案。"
+    },
+    {
+      "date": "2026-05",
+      "title": "Tongaliビジネスプランコンテスト2026 準決勝進出",
+      "detail": "チーム代表。シドニー留学での実体験を核にした、音声対話型の「サバイバル特化型AI留学シミュレーター」を提案。"
+    },
+    {
+      "date": "2025-11",
+      "title": "ソフトバンク 生成AI活用アイデアコンテスト 1次審査通過・最終64位",
+      "detail": "約4.5万件の応募から1次審査（上位100件）を通過し、役員向けプレゼンに進出。「匠アシスト」— 伝統技術者の暗黙知をマルチモーダルAIとARグラスで継承する構想。"
+    }
+  ],
+  "experience": [
+    {
+      "date": "2026-08",
+      "title": "奈良先端科学技術大学院大学 サイバネティクス・リアリティ工学研究室（CARE Lab）インターン",
+      "detail": "2週間。複数のAIキャラクターが議論してフィードバックする「階層型マルチエージェント行動変容システム」を研究テーマに、単一AI方式との比較実験を設計し成果発表。"
+    },
+    {
+      "date": "2026-02〜03",
+      "title": "語学留学（EF シドニー校・6週間）",
+      "detail": "ホームステイ先のトラブルを自分で交渉して住み替え。CEFR換算で A1未満 → B1.1。"
+    }
+  ],
+  "projects": [
+    {
+      "id": "context-pipeline",
+      "title": "個人コンテキストDB 自動更新パイプライン",
+      "status": "運用中",
+      "summary": "Google Takeout の全量ダンプ（1GB超）から前回以降の差分だけを抽出し、AIとの対話で使う自分専用のコンテキストファイルを更新し続ける仕組み。",
+      "points": [
+        "ローカル（Node・外部依存なし）で差分抽出 → 軽量モデルで要約 → 上位モデルで統合、の3段構成でAPIコストを抑制",
+        "1.32GBのzipを約2秒で差分判定",
+        "Claude Code のカスタムコマンド1つで全ステージを実行"
+      ],
+      "stack": ["Node.js", "Claude Code", "Claude API"],
+      "path": "../context-pipeline",
+      "exclude": ["diffs", "digests", "raw_archive", "my_context.md"]
+    },
+    {
+      "id": "koubo-dash",
+      "title": "公募締切ダッシュボード",
+      "status": "運用中",
+      "summary": "公募情報サイトを毎日差分クロールし、自分が応募できる案件（カテゴリ・年齢条件）だけを締切順に並べるローカルWebアプリ。",
+      "points": [
+        "sitemap の新着IDだけを取得する差分クロール（1リクエスト/秒で相手サーバーに配慮）",
+        "「高校生以下」などの応募条件をルールで判定して除外",
+        "多重起動を防ぐロック、強制終了時の途中保存、自動テストあり"
+      ],
+      "stack": ["Node.js", "HTML/CSS/JS"],
+      "path": "../koubo-dash",
+      "exclude": ["data"],
+      "metrics": [
+        { "label": "収集済み対象案件", "file": "data/contests.json", "get": "length", "unit": "件" }
+      ]
+    },
+    {
+      "id": "rpg-tracker",
+      "title": "人生RPG 習慣トラッカー",
+      "status": "試作",
+      "summary": "習慣をクエストとして登録し、達成するとEXPが貯まってレベルが上がる、ゲーミフィケーション型の自己管理ツール。",
+      "points": [
+        "レベルごとの必要EXPを指数関数で設計",
+        "単一HTMLファイル・インストール不要"
+      ],
+      "stack": ["HTML/CSS/JS"],
+      "path": "../index.html"
+    },
+    {
+      "id": "line-scheduler",
+      "title": "予定調整 LINEミニアプリ",
+      "status": "デプロイ済み",
+      "summary": "家族・友人との予定調整を LINE 上で完結させるミニアプリ。",
+      "points": [],
+      "stack": ["LIFF", "React", "Firebase"]
+    },
+    {
+      "id": "portfolio",
+      "title": "このポートフォリオサイト",
+      "status": "運用中",
+      "summary": "手書きのプロフィールと、各プロジェクトのソースコードから自動集計した数値を組み合わせて、1枚のHTMLを生成する。",
+      "points": [
+        "行数・テスト数・コミット数・最終更新日は手入力せず、ビルド時に実物から数える"
+      ],
+      "stack": ["Node.js"],
+      "path": ".",
+      "exclude": ["dist"]
+    }
+  ],
+  "upcoming": [
+    { "title": "YouTube チャンネル", "detail": "「やりこみ系」の企画を準備中。" }
+  ],
+  "skills": [
+    { "group": "言語", "items": ["Python", "JavaScript / Node.js", "C"] },
+    { "group": "AI", "items": ["Claude Code", "Claude API", "Gemini", "NotebookLM", "Cursor", "v0"] },
+    { "group": "その他", "items": ["Firebase", "LINE LIFF", "React（基礎）"] }
+  ]
+}
