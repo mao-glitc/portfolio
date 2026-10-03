@@ -148,7 +148,7 @@ footer{margin-top:4rem;padding-top:1.5rem;border-top:1px solid var(--color-neutr
   </div>
   <p>Google Takeout の全量ダンプ（1GB超）から前回以降の差分だけを抽出し、AIとの対話で使う自分専用のコンテキストファイルを更新し続ける仕組み。</p>
   <ul class="list"><li>ローカル（Node・外部依存なし）で差分抽出 → 軽量モデルで要約 → 上位モデルで統合、の3段構成でAPIコストを抑制</li><li>1.32GBのzipを約2秒で差分判定</li><li>Claude Code のカスタムコマンド1つで全ステージを実行</li></ul>
-  <dl class="stats"><div><dt>コード</dt><dd>856行</dd></div><div><dt>コミット</dt><dd>4</dd></div><div><dt>最終更新</dt><dd>2026-09-20</dd></div></dl>
+  <dl class="stats"><div><dt>コード</dt><dd>856行</dd></div><div><dt>コミット</dt><dd>5</dd></div><div><dt>最終更新</dt><dd>2026-09-20</dd></div></dl>
   <ul class="tags" role="list" aria-label="使用技術"><li class="chip" data-style="outlined" data-color="gray">Node.js</li><li class="chip" data-style="outlined" data-color="gray">Claude Code</li><li class="chip" data-style="outlined" data-color="gray">Claude API</li></ul>
 </article>
 <article class="card">
@@ -158,7 +158,7 @@ footer{margin-top:4rem;padding-top:1.5rem;border-top:1px solid var(--color-neutr
   </div>
   <p>公募情報サイトを毎日差分クロールし、自分が応募できる案件（カテゴリ・年齢条件）だけを締切順に並べるローカルWebアプリ。</p>
   <ul class="list"><li>sitemap の新着IDだけを取得する差分クロール（1リクエスト/秒で相手サーバーに配慮）</li><li>「高校生以下」などの応募条件をルールで判定して除外</li><li>多重起動を防ぐロック、強制終了時の途中保存、自動テストあり</li></ul>
-  <dl class="stats"><div><dt>収集済み対象案件</dt><dd>198件</dd></div><div><dt>コード</dt><dd>996行</dd></div><div><dt>テスト</dt><dd>38件</dd></div><div><dt>最終更新</dt><dd>2026-09-21</dd></div></dl>
+  <dl class="stats"><div><dt>収集済み対象案件</dt><dd>973件</dd></div><div><dt>コード</dt><dd>999行</dd></div><div><dt>テスト</dt><dd>38件</dd></div><div><dt>コミット</dt><dd>1</dd></div><div><dt>最終更新</dt><dd>2026-10-02</dd></div></dl>
   <ul class="tags" role="list" aria-label="使用技術"><li class="chip" data-style="outlined" data-color="gray">Node.js</li><li class="chip" data-style="outlined" data-color="gray">HTML/CSS/JS</li></ul>
 </article>
 <article class="card">
@@ -168,7 +168,7 @@ footer{margin-top:4rem;padding-top:1.5rem;border-top:1px solid var(--color-neutr
   </div>
   <p>習慣をクエストとして登録し、達成するとEXPが貯まってレベルが上がる、ゲーミフィケーション型の自己管理ツール。</p>
   <ul class="list"><li>レベルごとの必要EXPを指数関数で設計</li><li>単一HTMLファイル・インストール不要</li></ul>
-  <dl class="stats"><div><dt>コード</dt><dd>858行</dd></div><div><dt>最終更新</dt><dd>2026-09-20</dd></div></dl>
+  <dl class="stats"><div><dt>コード</dt><dd>858行</dd></div><div><dt>コミット</dt><dd>1</dd></div><div><dt>最終更新</dt><dd>2026-09-20</dd></div></dl>
   <ul class="tags" role="list" aria-label="使用技術"><li class="chip" data-style="outlined" data-color="gray">HTML/CSS/JS</li></ul>
 </article>
 <article class="card">
@@ -188,17 +188,17 @@ footer{margin-top:4rem;padding-top:1.5rem;border-top:1px solid var(--color-neutr
   </div>
   <p>手書きのプロフィールと、各プロジェクトのソースコードから自動集計した数値を組み合わせて、1枚のHTMLを生成する。</p>
   <ul class="list"><li>行数・テスト数・コミット数・最終更新日は手入力せず、ビルド時に実物から数える</li></ul>
-  <dl class="stats"><div><dt>コード</dt><dd>254行</dd></div><div><dt>最終更新</dt><dd>2026-09-23</dd></div></dl>
+  <dl class="stats"><div><dt>コード</dt><dd>254行</dd></div><div><dt>コミット</dt><dd>1</dd></div><div><dt>最終更新</dt><dd>2026-10-03</dd></div></dl>
   <ul class="tags" role="list" aria-label="使用技術"><li class="chip" data-style="outlined" data-color="gray">Node.js</li></ul>
 </article>
 </div></section>
-<section aria-labelledby="awards"><h2 id="awards" class="section-title">受賞・実績</h2><dl class="timeline"><div><dt>2026</dt><dd><h3>AI Business Challenge FES 2026（SAJ主催）AIサービス提案プレゼン部門 paiza株式会社賞</h3><p>「思考プロセス可視化・AIキャリアメンター」— コーディングの結果だけでなく過程をAIが解析・評価するサービスを提案。</p></dd></div><div><dt>2026-05</dt><dd><h3>Tongaliビジネスプランコンテスト2026 準決勝進出</h3><p>チーム代表。シドニー留学での実体験を核にした、音声対話型の「サバイバル特化型AI留学シミュレーター」を提案。</p></dd></div><div><dt>2025-11</dt><dd><h3>ソフトバンク 生成AI活用アイデアコンテスト 1次審査通過・最終64位</h3><p>約4.5万件の応募から1次審査（上位100件）を通過し、役員向けプレゼンに進出。「匠アシスト」— 伝統技術者の暗黙知をマルチモーダルAIとARグラスで継承する構想。</p></dd></div></dl></section>
+<section aria-labelledby="awards"><h2 id="awards" class="section-title">受賞・実績</h2><dl class="timeline"><div><dt>2026</dt><dd><h3>AI Business Challenge FES 2026（SAJ主催）AIサービス提案プレゼン部門 paiza株式会社賞</h3><p>「思考プロセス可視化・AIキャリアメンター」— コーディングの結果だけでなく過程をAIが解析・評価するサービスを提案。</p></dd></div><div><dt>2026-05</dt><dd><h3>Tongaliビジネスプランコンテスト2026 準決勝進出</h3><p>チーム代表。シドニー留学での実体験を核にした、音声対話型の「サバイバル特化型AI留学シミュレーター」を提案。</p></dd></div><div><dt>2025-11</dt><dd><h3>ソフトバンク 生成AI活用アイデアコンテスト 1次審査通過（100名）・最終63位</h3><p>応募総数 約4.5万件（1人が複数応募できる形式）の中から1次審査を通過した100名に選出され、2次審査のオンラインプレゼンに進出。最終順位は63位。「匠アシスト」— 伝統技術者の暗黙知をマルチモーダルAIとARグラスで継承する構想。</p></dd></div></dl></section>
 <section aria-labelledby="experience"><h2 id="experience" class="section-title">経験</h2><dl class="timeline"><div><dt>2026-08</dt><dd><h3>奈良先端科学技術大学院大学 サイバネティクス・リアリティ工学研究室（CARE Lab）インターン</h3><p>2週間。複数のAIキャラクターが議論してフィードバックする「階層型マルチエージェント行動変容システム」を研究テーマに、単一AI方式との比較実験を設計し成果発表。</p></dd></div><div><dt>2026-02〜03</dt><dd><h3>語学留学（EF シドニー校・6週間）</h3><p>ホームステイ先のトラブルを自分で交渉して住み替え。CEFR換算で A1未満 → B1.1。</p></dd></div></dl></section>
 <section aria-labelledby="upcoming"><h2 id="upcoming" class="section-title">準備中</h2><div class="upcoming"><h3>YouTube チャンネル</h3><p>「やりこみ系」の企画を準備中。</p></div></section>
 <section aria-labelledby="skills"><h2 id="skills" class="section-title">スキル</h2><dl class="skills"><div><dt>言語</dt><dd>Python / JavaScript / Node.js / C</dd></div><div><dt>AI</dt><dd>Claude Code / Claude API / Gemini / NotebookLM / Cursor / v0</dd></div><div><dt>その他</dt><dd>Firebase / LINE LIFF / React（基礎）</dd></div></dl></section>
 
 <footer>
-  <p>プロジェクトの数値は各ソースコードから自動集計しています。最終更新 <time datetime="2026-09-23">2026-09-23</time></p>
+  <p>プロジェクトの数値は各ソースコードから自動集計しています。最終更新 <time datetime="2026-10-03">2026-10-03</time></p>
   <p>デザインは<a href="https://design.digital.go.jp/dads/">デジタル庁デザインシステム</a>に準拠しています。</p>
 </footer>
 </main>
