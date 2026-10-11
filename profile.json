@@ -9,7 +9,7 @@
     "大学院進学（奈良先端科学技術大学院大学ほか）を志望しています。"
   ],
   "links": [
-    { "label": "GitHub", "url": "", "_todo": "公開したらURLを入れる。空欄のリンクは表示されない" },
+    { "label": "GitHub", "url": "https://github.com/mao-glitc" },
     { "label": "YouTube", "url": "", "_todo": "チャンネル開設後に入れる" },
     { "label": "Mail", "url": "" }
   ],
