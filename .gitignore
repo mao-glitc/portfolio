@@ -14,3 +14,9 @@ desktop.ini
 .DS_Store
 .vscode/
 .idea/
+
+# Cloudflare wrangler
+.wrangler/
+
+.dev.vars*
+!.dev.vars.example
